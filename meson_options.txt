@@ -1,0 +1,2 @@
+option('examples', type: 'boolean', value: true, description: 'Build examples')
+option('doc', type: 'boolean', value: true, description: 'Build API documentation')
