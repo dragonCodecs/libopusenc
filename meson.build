@@ -4,8 +4,9 @@ project(
 	version: '0.2.1',
 	license: 'BSD-3-Clause',
 	default_options: [
-		'warning_level=3',
 		'c_std=gnu99',
+		'warning_level=3',
+		'b_lundef=true',
 	]
 )
 
@@ -115,10 +116,6 @@ opusenc_extra_srcs = files(
 )
 
 opus_link_args = []
-
-opus_link_args += compiler.get_supported_link_arguments(
-	'-no-undefined'
-)
 
 if get_option('default_library') == 'static'
 	opusenc_lib = static_library(
